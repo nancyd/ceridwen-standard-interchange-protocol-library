@@ -237,7 +237,16 @@ public class Fields {
     Boolean validPatron;
     @Field(tag = "CQ", policy = FieldPolicy.NOT_REQUIRED)
     Boolean validPatronPassword;
-    
+    @Field(tag = "PB", policy = FieldPolicy.NOT_REQUIRED)
+    Date birthDate;
+    @Field(tag = "PA", policy = FieldPolicy.NOT_REQUIRED)
+    Integer pacAccessType;
+    @Field(tag = "ZY", policy = FieldPolicy.NOT_REQUIRED)
+    String patronType;
+    @Field(tag = "PT", policy = FieldPolicy.NOT_REQUIRED)
+    String patronGroup;
+
+
     static public PositionedFieldDefinition getPositionedFieldDefinition(String messageName, String fieldName, PositionedField annotation) {
         java.lang.reflect.Field fld;
         try {

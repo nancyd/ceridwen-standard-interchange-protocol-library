@@ -27,6 +27,7 @@ import com.ceridwen.circulation.SIP.fields.FieldPolicy;
 import com.ceridwen.circulation.SIP.types.enumerations.CurrencyType;
 import com.ceridwen.circulation.SIP.types.enumerations.Language;
 import com.ceridwen.circulation.SIP.types.flagfields.PatronStatus;
+import org.junit.Before;
 
 @Command("64")
 @TestCaseDefault("64              00019700101    010000                        AA|AE|AO|")
@@ -95,6 +96,15 @@ public class PatronInformationResponse extends Message {
     private String screenMessage;
     @TaggedField
     private String printLine;
+
+    @TaggedField
+    private Date birthDate;
+    @TaggedField
+    private Integer pacAccessType;
+    @TaggedField
+    private String patronType;
+    @TaggedField
+    private String patronGroup;
 
     public String[] getChargedItems() {
         return this.chargedItems;
@@ -218,6 +228,22 @@ public class PatronInformationResponse extends Message {
 
     public Boolean isValidPatronPassword() {
         return this.validPatronPassword;
+    }
+
+    public Integer getPacAccessType() {
+        return pacAccessType;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public String getPatronType() {
+        return patronType;
+    }
+
+    public String getPatronGroup() {
+        return patronGroup;
     }
 
     public void setValidPatronPassword(Boolean validPatronPassword) {
@@ -344,4 +370,21 @@ public class PatronInformationResponse extends Message {
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
     }
+
+    public void setPacAccessType(Integer pacAccessType) {
+        this.pacAccessType = pacAccessType;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public void setPatronType(String patronType) {
+        this.patronType = patronType;
+    }
+
+    public void setPatronGroup(String patronGroup) {
+        this.patronGroup = patronGroup;
+    }
+
 }
