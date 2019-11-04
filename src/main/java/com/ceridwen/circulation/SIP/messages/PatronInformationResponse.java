@@ -100,7 +100,7 @@ public class PatronInformationResponse extends Message {
     @TaggedField
     private Date birthDate;
     @TaggedField
-    private Integer pacAccessType;
+    private String pacAccessType;
     @TaggedField
     private String patronType;
     @TaggedField
@@ -230,7 +230,7 @@ public class PatronInformationResponse extends Message {
         return this.validPatronPassword;
     }
 
-    public Integer getPacAccessType() {
+    public String getPacAccessType() {
         return pacAccessType;
     }
 
@@ -371,7 +371,7 @@ public class PatronInformationResponse extends Message {
         this.emailAddress = emailAddress;
     }
 
-    public void setPacAccessType(Integer pacAccessType) {
+    public void setPacAccessType(String pacAccessType) {
         this.pacAccessType = pacAccessType;
     }
 

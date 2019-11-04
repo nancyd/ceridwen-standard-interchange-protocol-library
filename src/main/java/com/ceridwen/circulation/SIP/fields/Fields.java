@@ -240,7 +240,7 @@ public class Fields {
     @Field(tag = "PB", policy = FieldPolicy.NOT_REQUIRED)
     Date birthDate;
     @Field(tag = "PA", policy = FieldPolicy.NOT_REQUIRED)
-    Integer pacAccessType;
+    String pacAccessType;
     @Field(tag = "ZY", policy = FieldPolicy.NOT_REQUIRED)
     String patronType;
     @Field(tag = "PT", policy = FieldPolicy.NOT_REQUIRED)
