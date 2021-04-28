@@ -106,6 +106,14 @@ public class PatronInformationResponse extends Message {
     @TaggedField
     private String patronGroup;
 
+    @TaggedField
+    private String patronLoanClass;
+    @TaggedField
+    private String patronUserCategory1;
+    @TaggedField
+    private String patronUserCategory2;
+
+
     public String[] getChargedItems() {
         return this.chargedItems;
     }
@@ -244,6 +252,18 @@ public class PatronInformationResponse extends Message {
 
     public String getPatronGroup() {
         return patronGroup;
+    }
+
+    public String getPatronLoanClass() {
+        return patronLoanClass;
+    }
+
+    public String getPatronUserCategory1() {
+        return patronUserCategory1;
+    }
+
+    public String getPatronUserCategory2() {
+        return patronUserCategory2;
     }
 
     public void setValidPatronPassword(Boolean validPatronPassword) {
@@ -387,4 +407,9 @@ public class PatronInformationResponse extends Message {
         this.patronGroup = patronGroup;
     }
 
+    public void setPatronLoanClass(String patronLoanClass) { this.patronLoanClass = patronLoanClass; }
+
+    public void setPatronUserCategory1(String patronUserCategory1) { this.patronUserCategory1 = patronUserCategory1; }
+
+    public void setPatronUserCategory2(String patronUserCategory2) { this.patronUserCategory2 = patronUserCategory2; }
 }

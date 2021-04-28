@@ -246,6 +246,13 @@ public class Fields {
     @Field(tag = "PT", policy = FieldPolicy.NOT_REQUIRED)
     String patronGroup;
 
+    @Field(tag = "PC", policy = FieldPolicy.NOT_REQUIRED)
+    String patronLoanClass;
+    @Field(tag = "PE", policy = FieldPolicy.NOT_REQUIRED)
+    String patronUserCategory1;
+    @Field(tag = "PF", policy = FieldPolicy.NOT_REQUIRED)
+    String patronUserCategory2;
+
 
     static public PositionedFieldDefinition getPositionedFieldDefinition(String messageName, String fieldName, PositionedField annotation) {
         java.lang.reflect.Field fld;
